@@ -1,0 +1,22 @@
+module.exports = {
+  arrowParens: "avoid",
+  bracketSpacing: true,
+  printWidth: 100,
+  semi: true,
+  singleQuote: false,
+  tabWidth: 2,
+  trailingComma: "all",
+  useTabs: false,
+  importOrder: [
+    "^screens/(.*)$",
+    "^components/(.*)$",
+    "^assets/(.*)$",
+    "^constants/(.*)$",
+    "^utils/(.*)$",
+    "^api/(.*)$",
+    "^[./]",
+  ],
+  importOrderSeparation: false,
+  importOrderSortSpecifiers: true,
+  importOrderGroupNamespaceSpecifiers: true,
+};
