@@ -4,6 +4,7 @@ export interface IColors {
 
 export const COLOR_PALETTE: IColors = {
   default: "#0CB",
+  gray: "#F3F3F4",
 };
 
 export const colorVariants: IColors = {

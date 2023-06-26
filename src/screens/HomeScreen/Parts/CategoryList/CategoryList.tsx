@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { ScrollView } from "react-native";
-import CategoryCard from "components/CategoryCard/CategoryCard";
+import CategoryCard from "screens/HomeScreen/Parts/CategoryCard/CategoryCard";
 import { urlFor } from "api/groq/sanityClient";
 import { ICategoryListProps } from "./type";
 

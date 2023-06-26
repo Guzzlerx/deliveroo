@@ -3,10 +3,10 @@ import { FC } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { MapPinIcon } from "react-native-heroicons/outline";
 import { StarIcon } from "react-native-heroicons/solid";
-import { defineRatingColor } from "src/utils/defineRatingColor";
 import { RestaurantScreenNavigationProps } from "screens/RestaurantScreen/type";
 import { colorVariants } from "constants/colors";
 import { PATH } from "constants/path";
+import { defineRatingColor } from "utils/defineRatingColor";
 import { urlFor } from "api/groq/sanityClient";
 import { IRestaurantCardProps } from "./type";
 

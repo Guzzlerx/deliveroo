@@ -8,7 +8,7 @@ export interface IDish {
   _id: string;
   name: string;
   price: number;
-  description: string;
+  shortDescription: string;
   image: any;
 }
 
