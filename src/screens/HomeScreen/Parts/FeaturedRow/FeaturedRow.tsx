@@ -35,7 +35,7 @@ const FeaturedRow: FC<IFeaturedRowProps> = ({ title, description, id }): JSX.Ele
     <View>
       <View className="mt-4 flex-row items-center justify-between px-4">
         <Text className="font-bold text-lg">{title}</Text>
-        <ArrowRightIcon color={COLOR_PALETTE.default} />
+        <ArrowRightIcon color={COLOR_PALETTE.cyan} />
       </View>
       <Text className="text-gray-500 text-xs pb-4 px-4">{description}</Text>
 

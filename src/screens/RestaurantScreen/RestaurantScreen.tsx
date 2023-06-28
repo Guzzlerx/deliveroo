@@ -1,6 +1,7 @@
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
 import { ScrollView } from "react-native";
+import BasketPopup from "components/BasketPopup/BasketPopup";
 import { urlFor } from "api/groq/sanityClient";
 import RestaurantImage from "./Parts/RestaurantImage/RestaurantImage";
 import RestaurantInfo from "./Parts/RestaurantInfo/RestaurantInfo";
@@ -18,18 +19,22 @@ const RestaurantScreen = () => {
   }, []);
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-      <RestaurantImage imageUrl={urlFor(image).url()} onPressHandler={navigation.goBack} />
-      <RestaurantInfo
-        name={name}
-        address={address}
-        description={description}
-        rating={rating}
-        type={type}
-        onPressAllergyBlockHandler={() => console.log("allergy")}
-      />
-      <RestaurantMenu data={dishes} />
-    </ScrollView>
+    <>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <RestaurantImage imageUrl={urlFor(image).url()} onPressHandler={navigation.goBack} />
+        <RestaurantInfo
+          name={name}
+          address={address}
+          description={description}
+          rating={rating}
+          type={type}
+          onPressAllergyBlockHandler={() => console.log("allergy")}
+        />
+        <RestaurantMenu dishes={dishes} />
+      </ScrollView>
+
+      <BasketPopup />
+    </>
   );
 };
 

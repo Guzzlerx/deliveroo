@@ -40,7 +40,7 @@ const RestaurantInfo: FC<IRestaurantInfoProps> = ({
       >
         <QuestionMarkCircleIcon color="gray" opacity={0.5} />
         <Text className="flex-1 font-bold">Have a food allergy?</Text>
-        <ChevronRightIcon color={COLOR_PALETTE.default} size={18} />
+        <ChevronRightIcon color={COLOR_PALETTE.cyan} size={18} />
       </TouchableOpacity>
     </View>
   );

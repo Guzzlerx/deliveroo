@@ -12,7 +12,7 @@ const RestaurantImage: FC<IRestaurantImageProps> = ({ imageUrl, onPressHandler }
         className="absolute top-14 left-4 bg-white rounded-full p-1.5 opacity-90"
         onPress={onPressHandler}
       >
-        <ArrowLeftIcon color={COLOR_PALETTE.default} size={22} />
+        <ArrowLeftIcon color={COLOR_PALETTE.cyan} size={22} />
       </TouchableOpacity>
     </View>
   );

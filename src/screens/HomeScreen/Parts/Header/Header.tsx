@@ -15,10 +15,10 @@ const Header: FC = (): JSX.Element => {
         <Text className="font-bold text-gray-400 text-xs">Deilver Now!</Text>
         <Text className="font-bold text-xl">
           Current Location
-          <ChevronDownIcon size={20} color={COLOR_PALETTE.default} />
+          <ChevronDownIcon size={20} color={COLOR_PALETTE.cyan} />
         </Text>
       </View>
-      <UserIcon size={35} color={COLOR_PALETTE.default} />
+      <UserIcon size={35} color={COLOR_PALETTE.cyan} />
     </View>
   );
 };

@@ -15,7 +15,7 @@ const Search: FC = (): JSX.Element => {
           placeholder="Restaurants and cuisines"
         />
       </View>
-      <AdjustmentsVerticalIcon color={COLOR_PALETTE.default} />
+      <AdjustmentsVerticalIcon color={COLOR_PALETTE.cyan} />
     </View>
   );
 };

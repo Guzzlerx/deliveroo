@@ -1,5 +1,5 @@
 import { IDish } from "screens/HomeScreen/Parts/FeaturedRow/type";
 
-export interface IRestaurantMenuProps {
-  dishes: IDish[];
+export interface IBasketSlice {
+  items: IDish[];
 }

@@ -3,7 +3,8 @@ export interface IColors {
 }
 
 export const COLOR_PALETTE: IColors = {
-  default: "#0CB",
+  cyan: "#00CCBB",
+  cyanDark: "#01A296",
   gray: "#F3F3F4",
 };
 
