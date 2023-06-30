@@ -9,3 +9,4 @@ export const selectBasketItemsWithId = createSelector(
 );
 export const selectBasketTotal = (state: RootState) =>
   state.basket.items.reduce((total, item) => total + item.price, 0).toFixed(2);
+export const selectRestaurant = (state: RootState) => state.restaurant.restaurant;

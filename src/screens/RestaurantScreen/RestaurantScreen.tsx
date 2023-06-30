@@ -1,7 +1,11 @@
 import { useNavigation, useRoute } from "@react-navigation/native";
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { ScrollView } from "react-native";
+import { setRestaurant } from "store/restaurantSlice/restaurantSlice";
+import { selectBasketItems } from "store/selectors";
+import { useAppDispatch, useAppSelector } from "store/store";
 import BasketPopup from "components/BasketPopup/BasketPopup";
+import { PATH } from "constants/path";
 import { urlFor } from "api/groq/sanityClient";
 import RestaurantImage from "./Parts/RestaurantImage/RestaurantImage";
 import RestaurantInfo from "./Parts/RestaurantInfo/RestaurantInfo";
@@ -14,8 +18,17 @@ const RestaurantScreen = () => {
 
   const { _id, image, name, address, dishes, type, lat, long, rating, description } = route.params;
 
+  const items = useAppSelector(selectBasketItems);
+  const dispatch = useAppDispatch();
+
   useLayoutEffect(() => {
     navigation.setOptions({ headerShown: false });
+  }, []);
+
+  useEffect(() => {
+    dispatch(
+      setRestaurant({ _id, image, name, address, dishes, type, lat, long, rating, description }),
+    );
   }, []);
 
   return (
@@ -28,12 +41,10 @@ const RestaurantScreen = () => {
           description={description}
           rating={rating}
           type={type}
-          onPressAllergyBlockHandler={() => console.log("allergy")}
         />
         <RestaurantMenu dishes={dishes} />
       </ScrollView>
-
-      <BasketPopup />
+      {!!items?.length && <BasketPopup />}
     </>
   );
 };

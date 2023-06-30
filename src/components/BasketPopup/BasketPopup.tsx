@@ -3,14 +3,14 @@ import { FC } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { selectBasketItems, selectBasketTotal } from "store/selectors";
 import { useAppSelector } from "store/store";
-import { RestaurantScreenNavigationProps } from "screens/RestaurantScreen/type";
+import { BasketScreenNavigationProps } from "screens/BasketScreen/type";
 import { PATH } from "constants/path";
 
 const BasketPopup: FC = (): JSX.Element => {
   const items = useAppSelector(selectBasketItems);
   const totalPrice = useAppSelector(selectBasketTotal);
 
-  const navigation = useNavigation<RestaurantScreenNavigationProps>();
+  const navigation = useNavigation<BasketScreenNavigationProps>();
 
   const onPressHandler = () => {
     navigation.navigate(PATH.BASKET);

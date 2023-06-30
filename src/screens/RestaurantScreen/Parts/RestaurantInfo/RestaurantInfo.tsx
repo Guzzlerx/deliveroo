@@ -1,20 +1,22 @@
+import { useNavigation } from "@react-navigation/native";
 import { FC } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { ChevronRightIcon, QuestionMarkCircleIcon } from "react-native-heroicons/outline";
 import { MapPinIcon, StarIcon } from "react-native-heroicons/solid";
+import { RestaurantScreenNavigationProps } from "screens/RestaurantScreen/type";
 import { COLOR_PALETTE, colorVariants } from "constants/colors";
+import { PATH } from "constants/path";
 import { defineRatingColor } from "utils/defineRatingColor";
 import { IRestaurantInfoProps } from "./type";
 
-const RestaurantInfo: FC<IRestaurantInfoProps> = ({
-  address,
-  name,
-  description,
-  rating,
-  type,
-  onPressAllergyBlockHandler,
-}) => {
+const RestaurantInfo: FC<IRestaurantInfoProps> = ({ address, name, description, rating, type }) => {
+  const navigation = useNavigation<RestaurantScreenNavigationProps>();
+
   const color = defineRatingColor(rating);
+
+  const showAllergyInfo = () => {
+    navigation.navigate(PATH.ALLERGY);
+  };
 
   return (
     <View className="bg-white">
@@ -35,7 +37,7 @@ const RestaurantInfo: FC<IRestaurantInfoProps> = ({
         <Text className="text-gray-500 text-base mt-2 pb-4">{description}</Text>
       </View>
       <TouchableOpacity
-        onPress={onPressAllergyBlockHandler}
+        onPress={showAllergyInfo}
         className="flex-row items-center p-4 space-x-3 border-y border-gray-300"
       >
         <QuestionMarkCircleIcon color="gray" opacity={0.5} />
