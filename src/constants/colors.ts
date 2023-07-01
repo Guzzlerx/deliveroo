@@ -8,6 +8,8 @@ export const COLOR_PALETTE: IColors = {
   gray: "#F3F3F4",
 };
 
+export const color123 = "#00CCBB";
+
 export const colorVariants: IColors = {
   green: "text-green-500",
   red: "text-red-500",

@@ -7,6 +7,7 @@ export const selectBasketItemsWithId = createSelector(
   [selectBasketItems, (items, id: IDish["_id"]) => id],
   (items, id) => items.filter(item => item._id === id),
 );
+export const selectBasketFee = (state: RootState) => state.basket.deliveryFee;
 export const selectBasketTotal = (state: RootState) =>
-  state.basket.items.reduce((total, item) => total + item.price, 0).toFixed(2);
+  Number(state.basket.items.reduce((total, item) => total + item.price, 0).toFixed(2));
 export const selectRestaurant = (state: RootState) => state.restaurant.restaurant;

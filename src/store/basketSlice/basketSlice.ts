@@ -5,6 +5,7 @@ import { IBasketSlice } from "./type";
 
 const initialState: IBasketSlice = {
   items: [],
+  deliveryFee: 3.5,
 };
 
 export const basketSlice = createSlice({

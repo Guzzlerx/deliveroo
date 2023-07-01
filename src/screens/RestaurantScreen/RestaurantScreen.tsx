@@ -5,7 +5,6 @@ import { setRestaurant } from "store/restaurantSlice/restaurantSlice";
 import { selectBasketItems } from "store/selectors";
 import { useAppDispatch, useAppSelector } from "store/store";
 import BasketPopup from "components/BasketPopup/BasketPopup";
-import { PATH } from "constants/path";
 import { urlFor } from "api/groq/sanityClient";
 import RestaurantImage from "./Parts/RestaurantImage/RestaurantImage";
 import RestaurantInfo from "./Parts/RestaurantInfo/RestaurantInfo";
