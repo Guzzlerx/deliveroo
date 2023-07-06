@@ -11,12 +11,12 @@ const AllergyScreen: FC = (): JSX.Element => {
   };
 
   return (
-    <SafeAreaView className="space-y-8 bg-white h-full relative">
+    <SafeAreaView className="bg-white h-full relative">
       <View className="flex-row items-center p-4">
         <Text className="font-bold text-lg flex-1">Info about food allergies</Text>
         <CloseButton onPressHandler={onPressHandler} />
       </View>
-      <View className="p-4">
+      <View className="px-4">
         <Text className="text-gray-500 text-base">
           Food allergies occur when the immune system reacts to specific proteins in certain foods.
           Common allergens include peanuts, tree nuts, milk, eggs, fish, shellfish, wheat, soy, and

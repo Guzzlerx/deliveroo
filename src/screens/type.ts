@@ -6,6 +6,7 @@ export type RootStackParamList = {
   Restaurant: IRestaurant;
   Basket: undefined;
   Allergy: undefined;
+  PreparingOrder: undefined;
 };
 
 export type RestaurantScreenProps = NativeStackScreenProps<RootStackParamList, "Restaurant">;

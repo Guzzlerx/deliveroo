@@ -3,6 +3,7 @@ import { PATH } from "constants/path";
 import AllergyScreen from "./AllergyScreen/AllergyScreen";
 import BasketScreen from "./BasketScreen/BasketScreen";
 import HomeScreen from "./HomeScreen/HomeScreen";
+import PreparingOrderScreen from "./PreparingOrderScreen/PreparingOrderScreen";
 import RestaurantScreen from "./RestaurantScreen/RestaurantScreen";
 import { RootStackParamList } from "./type";
 
@@ -25,6 +26,11 @@ const Screens = () => {
         name={PATH.ALLERGY}
         component={AllergyScreen}
         options={{ presentation: "modal", headerShown: false }}
+      />
+      <Stack.Screen
+        name={PATH.PREPARING_ORDER}
+        component={PreparingOrderScreen}
+        options={{ presentation: "fullScreenModal", headerShown: false }}
       />
     </Stack.Navigator>
   );

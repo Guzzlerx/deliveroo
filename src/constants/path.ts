@@ -3,4 +3,5 @@ export enum PATH {
   RESTAURANT = "Restaurant",
   BASKET = "Basket",
   ALLERGY = "Allergy",
+  PREPARING_ORDER = "PreparingOrder",
 }
