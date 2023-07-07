@@ -1,10 +1,21 @@
 import * as Animatable from "react-native-animatable";
 import * as Progress from "react-native-progress";
-import { FC } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { FC, useEffect } from "react";
 import { SafeAreaView } from "react-native";
 import ProcessingImage from "assets/images/processing_order.gif";
+import { PATH } from "constants/path";
+import { PreparingOrderScreenNavigationProps } from "./type";
 
 const PreparingOrderScreen: FC = (): JSX.Element => {
+  const navigation = useNavigation<PreparingOrderScreenNavigationProps>();
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate(PATH.DELIVERY);
+    }, 4000);
+  }, []);
+
   return (
     <SafeAreaView className="bg-[#00CCBB] flex-1 justify-center items-center">
       <Animatable.Image

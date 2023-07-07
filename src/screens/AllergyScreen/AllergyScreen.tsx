@@ -14,7 +14,7 @@ const AllergyScreen: FC = (): JSX.Element => {
     <SafeAreaView className="bg-white h-full relative">
       <View className="flex-row items-center p-4">
         <Text className="font-bold text-lg flex-1">Info about food allergies</Text>
-        <CloseButton onPressHandler={onPressHandler} />
+        <CloseButton width={50} height={50} onPressHandler={onPressHandler} />
       </View>
       <View className="px-4">
         <Text className="text-gray-500 text-base">

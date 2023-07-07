@@ -2,7 +2,7 @@ import { useFetch } from "hooks/useFetch";
 import { FC, useEffect, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
 import { ArrowRightIcon } from "react-native-heroicons/outline";
-import RestaurantCard from "screens/HomeScreen/Parts/FeaturedRow/Parts/RestaurantCard/RestaurantCard";
+import RestaurantCard from "components/RestaurantCard/RestaurantCard";
 import { COLOR_PALETTE } from "constants/colors";
 import { IFeaturedRowProps, IRestaurant } from "./type";
 

@@ -10,7 +10,12 @@ const BasketHeader: FC<IBasketHeaderProps> = ({ title, onPressHandler }): JSX.El
         <Text className="font-bold text-center text-lg">Basket</Text>
         <Text className="text-gray-400 text-center">{title}</Text>
       </View>
-      <CloseButton styles="absolute top-4 right-5" onPressHandler={onPressHandler} />
+      <CloseButton
+        height={50}
+        width={50}
+        styles="absolute top-4 right-5"
+        onPressHandler={onPressHandler}
+      />
     </View>
   );
 };

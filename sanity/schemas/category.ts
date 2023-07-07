@@ -12,9 +12,21 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'shortDescription',
+      title: 'Short description',
+      type: 'string',
+      validation: (Rule) => Rule.max(200),
+    }),
+    defineField({
       name: 'image',
       title: 'Image of Category',
       type: 'image',
+    }),
+    defineField({
+      name: 'restaurants',
+      title: 'Restaurants',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'restaurant'}]}],
     }),
   ],
 })

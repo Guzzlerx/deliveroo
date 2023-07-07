@@ -1,3 +1,5 @@
+import { IRestaurant } from "./Parts/FeaturedRow/type";
+
 export interface IFeaturedCategories {
   name: string;
   _id: string;
@@ -6,6 +8,8 @@ export interface IFeaturedCategories {
 
 export interface ICuisineCategories {
   name: string;
+  shortDescription: string;
   _id: string;
   image: any;
+  restaurants: IRestaurant[];
 }

@@ -15,8 +15,14 @@ const CategoryList: FC<ICategoryListProps> = ({ data }): JSX.Element => {
       }}
       className="pt-3"
     >
-      {data.map(({ image, _id, name }) => (
-        <CategoryCard imgUrl={urlFor(image).url()} key={_id} title={name} />
+      {data.map(({ image, _id, name, restaurants, shortDescription }) => (
+        <CategoryCard
+          imgUrl={urlFor(image).url()}
+          key={_id}
+          title={name}
+          shortDescription={shortDescription}
+          restaurants={restaurants}
+        />
       ))}
     </ScrollView>
   );

@@ -31,7 +31,13 @@ const HomeScreen: FC = (): JSX.Element => {
   const getCuisineCategories = () =>
     request(
       `*[_type == "category"] {
-        name, _id, image
+        name, _id, image, shortDescription,
+        restaurants[] -> {
+          ...,
+          dishes[] -> {
+            ...,
+          }
+        }
     }`,
     ).then(data => setCuisineCategories(data));
 

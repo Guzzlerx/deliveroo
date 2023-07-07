@@ -15,7 +15,11 @@
     "jsEngine": "hermes",
     "ios": {
       "jsEngine": "jsc",
-      "supportsTablet": true
+      "bundleIdentifier": "com.deliveroo.guzzlero",
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyCuU7r5lMnjuF2I3UUJ-4QxJfWC8Pi6CQk"
+      }
     },
     "android": {
       "adaptiveIcon": {
