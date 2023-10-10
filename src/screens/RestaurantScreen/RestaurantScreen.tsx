@@ -4,7 +4,7 @@ import { ScrollView } from "react-native";
 import { setRestaurant } from "store/restaurantSlice/restaurantSlice";
 import { selectBasketItems } from "store/selectors";
 import { useAppDispatch, useAppSelector } from "store/store";
-import BasketPopup from "components/BasketPopup/BasketPopup";
+import BasketPopup from "components/UI/BasketPopup/BasketPopup";
 import { urlFor } from "api/groq/sanityClient";
 import RestaurantImage from "./Parts/RestaurantImage/RestaurantImage";
 import RestaurantInfo from "./Parts/RestaurantInfo/RestaurantInfo";

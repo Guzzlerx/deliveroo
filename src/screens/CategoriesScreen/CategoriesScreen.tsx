@@ -1,8 +1,8 @@
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { FC, useLayoutEffect } from "react";
 import { SafeAreaView, ScrollView, Text, View } from "react-native";
-import CloseButton from "components/CloseButton/CloseButton";
 import RestaurantCard from "components/RestaurantCard/RestaurantCard";
+import CloseButton from "components/UI/CloseButton/CloseButton";
 import { CategoriesScreenNavigationProps, CategoriesScreenRouteProps } from "./type";
 
 const CategoriesScreen: FC = (): JSX.Element => {

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Text, View } from "react-native";
-import SubmitButton from "components/SubmitButton/SubmitButton";
+import SubmitButton from "components/UI/SubmitButton/SubmitButton";
 import { IPaymentInfoProps } from "./type";
 
 const PaymentInfo: FC<IPaymentInfoProps> = ({

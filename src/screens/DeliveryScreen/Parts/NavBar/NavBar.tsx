@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Text, View } from "react-native";
-import CloseButton from "components/CloseButton/CloseButton";
+import CloseButton from "components/UI/CloseButton/CloseButton";
 import { INavBarProps } from "./type";
 
 const NavBar: FC<INavBarProps> = ({ onClosePressHandler }) => {

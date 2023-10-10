@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import { FC } from "react";
 import { SafeAreaView, Text, View } from "react-native";
-import CloseButton from "components/CloseButton/CloseButton";
+import CloseButton from "components/UI/CloseButton/CloseButton";
 
 const AllergyScreen: FC = (): JSX.Element => {
   const navigation = useNavigation();

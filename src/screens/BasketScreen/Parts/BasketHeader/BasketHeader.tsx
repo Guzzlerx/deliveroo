@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Text, View } from "react-native";
-import CloseButton from "components/CloseButton/CloseButton";
+import CloseButton from "components/UI/CloseButton/CloseButton";
 import { IBasketHeaderProps } from "./type";
 
 const BasketHeader: FC<IBasketHeaderProps> = ({ title, onPressHandler }): JSX.Element => {
